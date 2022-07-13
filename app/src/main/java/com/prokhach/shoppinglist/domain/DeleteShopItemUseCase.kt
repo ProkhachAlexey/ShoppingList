@@ -2,8 +2,8 @@ package com.prokhach.shoppinglist.domain
 
 // Интерактор для удаления элемента из списка покупок
 
-class DeleteShopItemUseCase {
+class DeleteShopItemUseCase(private val shopListRepository: ShopListRepository) {
     fun deleteShopItem(shopItem: ShopItem) {
-        TODO()
+        shopListRepository.deleteShopItem(shopItem)
     }
 }
